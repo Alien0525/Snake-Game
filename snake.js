@@ -13,7 +13,9 @@ function init(){
 
 	//Create a Image Object for food
 	food_img = new Image();
-	food_img.src = "Assets/face.png";
+	food_img.src = "Assets/aaryan.png";
+	face = new Image();
+	face.src = "Assets/face.png";
 
 	trophy = new Image();
 	trophy.src = "Assets/trophy.png";
@@ -38,7 +40,11 @@ function init(){
 				pen.fillStyle = this.color;
 				pen.shadowBlur = 20;
 				pen.shadowColor = "black";
-				pen.fillRect(this.cells[i].x*cs, this.cells[i].y*cs, cs-3, cs-3);
+				if(i==0){
+					pen.drawImage(face,this.cells[i].x*cs, this.cells[i].y*cs, cs, cs);
+				}else{
+					pen.fillRect(this.cells[i].x*cs, this.cells[i].y*cs, cs-3, cs-3);
+				}
 			}
 		},
 
@@ -131,7 +137,7 @@ function draw(){
 	pen.fillStyle = food.color;
 	pen.shadowBlur = 20;
 	pen.shadowColor = "black";
-	pen.drawImage(food_img,food.x* cs,food.y*cs, cs+2, cs+2);
+	pen.drawImage(food_img,food.x* cs,food.y*cs, cs+12, cs+12);
 
 	pen.drawImage(trophy,18,20,cs,cs);
 	pen.fillStyle = "blue";
