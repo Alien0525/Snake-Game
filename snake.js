@@ -13,7 +13,7 @@ function init(){
 
 	//Create a Image Object for food
 	food_img = new Image();
-	food_img.src = "Assets/google.png";
+	food_img.src = "Assets/apple.png";
 	face = new Image();
 	face.src = "Assets/face.png";
 
