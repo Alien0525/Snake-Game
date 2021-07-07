@@ -137,7 +137,7 @@ function draw(){
 	pen.fillStyle = food.color;
 	pen.shadowBlur = 20;
 	pen.shadowColor = "black";
-	pen.drawImage(food_img,food.x* cs,food.y*cs, cs+12, cs+12);
+	pen.drawImage(food_img,food.x* cs,food.y*cs, cs, cs);
 
 	pen.drawImage(trophy,18,20,cs,cs);
 	pen.fillStyle = "black";
